@@ -1,0 +1,94 @@
+@import "@litres-libs/global-styles/src/base";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 288px;
+  max-width: 480px;
+  padding: 20px 24px;
+  border-radius: 16px;
+
+  color: $content-light-primary;
+
+  background-color: $background-light-primary;
+  @include ShadowLevel0;
+}
+
+.levelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 32px;
+
+  .level {
+    @include BodyM;
+    color: $content-light-secondary;
+    font-weight: 400;
+  }
+  &_icon {
+    color: $content-light-secondary;
+  }
+}
+
+.caption {
+  margin-bottom: 8px;
+
+  &_title {
+    @include BodyM;
+    font-weight: 500;
+  }
+
+  &_description {
+    @include BodyM;
+    font-weight: 400;
+  }
+}
+
+.progressContainer {
+  width: 100%;
+
+  .progress {
+    position: relative;
+
+    height: 2px;
+    margin-bottom: 4px;
+    border-radius: 40px;
+
+    background: $pallets-blue-20;
+
+    &::after {
+      position: absolute;
+      top: -1px;
+
+      width: var(--progress, 0%);
+      height: 4px;
+      border-radius: 40px;
+
+      background-color: #9013fe;
+
+      content: "";
+    }
+  }
+
+  .rangeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .price {
+    color: $content-light-secondary;
+    @include SmallCaption;
+    font-weight: 400;
+  }
+}
+
+.innactive {
+  color: $content-light-secondary;
+}
+
+.icon__none {
+  display: none;
+}

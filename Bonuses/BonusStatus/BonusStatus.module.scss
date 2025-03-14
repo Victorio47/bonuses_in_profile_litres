@@ -1,0 +1,42 @@
+@import "@litres-libs/global-styles/src/base";
+
+.bonusStatus {
+  &__content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: stretch;
+    padding: 12px 16px 12px 36px;
+    border-radius: 12px;
+
+    background: $pallets-blue-5;
+  }
+  &__statusSign {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+
+    display: flex;
+    width: 16px;
+    height: 16px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__text {
+    @include BodyM700;
+    color: $pallets-gray-100;
+  }
+
+  &__subtext {
+    @include BodyM;
+    color: $pallets-gray-110;
+  }
+  &__error {
+    color: $service-light-error-content;
+  }
+}

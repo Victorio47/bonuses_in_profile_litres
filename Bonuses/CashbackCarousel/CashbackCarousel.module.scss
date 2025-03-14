@@ -1,0 +1,30 @@
+@import "@litres-libs/global-styles/src/base";
+
+.carousel {
+  position: relative;
+
+  margin: 16px auto;
+
+  @include max-screen-1024 {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+}
+
+.card {
+  flex: 0 0 80%;
+  margin-left: var(--slide-spacing);
+}
+
+.dot {
+  bottom: -10px;
+
+  [data-selected="selected"] {
+    background-color: #9013fe;
+    opacity: 1;
+  }
+}
+
+.fakeBlock {
+  height: 175px;
+}

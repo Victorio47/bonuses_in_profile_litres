@@ -1,0 +1,42 @@
+@import "@litres-libs/global-styles/src/base";
+$title: $pallets-gray-100;
+$titleMobile: $pallets-gray-90;
+.bonusesTitle {
+  position: relative;
+
+  display: flex;
+  margin-bottom: 8px;
+
+  color: $title;
+  @include Headline1;
+  @include max-screen-700 {
+    padding-left: 26px;
+    @include Headline4;
+    color: $titleMobile;
+  }
+  &_marginBig {
+    margin-bottom: 24px;
+    @include max-screen-700 {
+      margin-bottom: 16px;
+    }
+  }
+  &__backLink {
+    position: absolute;
+    top: 3px;
+    left: -30px;
+
+    display: flex;
+
+    color: $title;
+
+    cursor: pointer;
+
+    @include genrerate-link-states($title);
+    @include max-screen-700 {
+      left: -4px;
+
+      color: $titleMobile;
+      @include genrerate-link-states($titleMobile);
+    }
+  }
+}

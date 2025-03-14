@@ -1,0 +1,118 @@
+@import "@litres-libs/global-styles/src/base";
+
+$amount: #7800ff;
+
+.bonuses {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 640px;
+  padding: 0 60px;
+
+  @include max-screen-700 {
+    width: auto;
+    padding: 0;
+  }
+  &__amount {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 4px;
+
+    color: $amount;
+    @include HighlightTitle;
+    svg {
+      color: $amount;
+    }
+    @include max-screen-700 {
+      gap: 6px;
+      @include HighlightTitleMobile;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  &__expiration {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    margin-bottom: 24px;
+
+    color: $pallets-gray-60;
+    @include Caption;
+    @include max-screen-700 {
+      margin-bottom: 32px;
+    }
+    svg {
+      path: {
+        color: $pallets-gray-60;
+      }
+    }
+  }
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+  &__description {
+    @include BodyM;
+    margin-bottom: 16px;
+  }
+  &__inner {
+    position: relative;
+
+    max-width: 640px;
+    height: max-content;
+    margin-bottom: 16px;
+    padding: 20px 0 24px;
+    @include max-screen-700 {
+      max-width: none;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: -140px;
+    left: -60px;
+    z-index: -1;
+
+    width: 640px;
+    height: 100%;
+    border-radius: 48px;
+
+    background: radial-gradient(
+      348.41% 150.03% at 102.86% 2.26%,
+      #9993e2 0%,
+      #e4e2fd 41.7%,
+      #f4f4fc 100%
+    );
+    @include max-screen-700 {
+      left: -18px;
+
+      width: 102vw;
+    }
+  }
+  &__goToShoping {
+    max-width: 382px;
+    margin-bottom: 16px;
+    @include max-screen-700 {
+      width: 100%;
+      max-width: 382px;
+    }
+  }
+  &__getBonuses {
+    max-width: 320px;
+    margin: 16px 0;
+    @include max-screen-700 {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+  &__howItWorks {
+    margin-bottom: 32px;
+  }
+  &__status {
+    max-width: 520px;
+    margin: 16px 0 12px;
+  }
+}

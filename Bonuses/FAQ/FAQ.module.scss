@@ -1,0 +1,18 @@
+@import "@litres-libs/global-styles/src/base";
+
+.bonusesFAQ {
+  &__wrap {
+    padding-top: 16px;
+  }
+  &__subTitle {
+    font-weight: bold;
+  }
+  &__title {
+    margin-bottom: 16px;
+    @include Headline4;
+  }
+  &__flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+}

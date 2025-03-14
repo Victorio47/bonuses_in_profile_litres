@@ -1,0 +1,15 @@
+@import "@litres-libs/global-styles/src/base";
+$spark: #E0C4FF;
+.brands {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  &__spark {
+    color: $spark;
+  }
+  @include max-screen-700 {
+    gap: normal;
+    justify-content: space-between;
+    max-width: 382px;
+  }
+}
